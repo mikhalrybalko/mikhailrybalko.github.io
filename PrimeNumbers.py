@@ -17,14 +17,11 @@ def primes_below(n):
 print(primes_below(100))
 
 
-
-a=input('enter a string :')# palindrome in string
-b=a[::-1]
-if a==b:
-    print(a,'is a palindrome')
-else:
-    print(a,'is not a palindrome')
-    print('a is not equal to b')
-if a!=b:
-    print(b, 'the reverse of', a)
-#output:
+def palindrome_primes():
+    a=  []
+    for l in range(10000,100000):
+        if is_prime(l):
+            if str(l) == str(l)[::-1]:
+                a.append(l)
+    return(a)
+print(palindrome_primes())
